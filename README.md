@@ -34,4 +34,4 @@
 
 ## Авторы
 
-* **Дудникова Диана** - *студент ПКГХ гр. ИП-19-3* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Дудникова Диана** - *студент ПКГХ гр. ИП-19-3* - [User](https://github.com/Delivery25/Exam)
