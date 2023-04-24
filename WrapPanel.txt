@@ -1,0 +1,17 @@
+     <ListView Grid.Row="1"
+                  Grid.Column="0"
+                  Grid.ColumnSpan="2"
+                  ItemsSource="{Binding Tours}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  x:Name="LPanel">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Stretch" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <controls:WrapPanelItemControl DataContext="{Binding }" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
