@@ -1,0 +1,69 @@
+﻿<Page x:Class="Exam.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Exam.Pages"
+      mc:Ignorable="d"
+      d:DesignHeight="450"
+      d:DesignWidth="800"
+      Title="Авторизация"
+      IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid Background="{StaticResource SecondColor}">
+
+        <StackPanel Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    Width="220">
+
+            <!--Логин-->
+            <HeaderedContentControl Header="Логин" 
+                                    IsTabStop="False"
+                                    Margin="5">
+                <TextBox x:Name="LoginTextBox"/>
+            </HeaderedContentControl>
+
+            <!--Пароль-->
+            <HeaderedContentControl Header="Пароль"
+                                    Margin="5"
+                                    IsTabStop="False">
+                <TextBox x:Name="PasswordTextBox"/>
+            </HeaderedContentControl>
+
+            <!--Капча-->
+            <Image x:Name="CaptchaImage" Margin="5"/>
+
+            <!--Поле для ввода капчи-->
+            <Grid Background="White"
+                  Margin="5">
+
+                <TextBlock Text="Введите капчу"
+                           VerticalAlignment="Center"
+                           Foreground="Gray"
+                           Padding="10 1"
+                           x:Name="CaptchaPlaceholder"/>
+
+                <TextBox x:Name="CaptchaTextBox"
+                         Padding="8 0"
+                         VerticalContentAlignment="Center"
+                         Background="Transparent"
+                         TextChanged="CaptchaTextBox_TextChanged"/>
+            </Grid>
+
+            <!--Кнопка обновления капчи-->
+            <Button Content="Обновить капчу"
+                    x:Name="UpdateCaptchaButton"
+                    Margin="5"
+                    Background="Transparent" 
+                    Click="UpdateCaptchaButton_Click"/>
+
+            <!--Кнопка входа в аккаунт-->
+            <Button Content="Войти в аккаунт"
+                    Margin="5 10"
+                    x:Name="LoginButton"
+                    Background="{StaticResource AccentColor}"
+                    Click="LoginButton_Click"
+                    IsDefault="True"/>
+        </StackPanel>
+    </Grid>
+</Page>
